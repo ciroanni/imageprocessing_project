@@ -10,7 +10,6 @@ public class resetText : MonoBehaviour
     private void Start()
     {
         objectMenu = GameObject.Find("Object menu");
-        canvas = gameObject.transform.parent.gameObject;
     }
 
     public void resetAll()
@@ -19,7 +18,5 @@ public class resetText : MonoBehaviour
         {
             objectMenu.transform.GetChild(i).gameObject.SetActive(true);
         }
-        Destroy(canvas);
-        //Destroy(gameObject);
     }
 }

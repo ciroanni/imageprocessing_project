@@ -129,7 +129,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         var positionOnTopOfSurface = new Vector3(position.x, position.y + objectLocation.localScale.y,
             position.z);
         var note_inst = PhotonNetwork.Instantiate("note", positionOnTopOfSurface, objectLocation.rotation);
-        keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false, false);
+        
         objects.Add(note_inst);
     }
 

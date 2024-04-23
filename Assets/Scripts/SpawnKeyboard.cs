@@ -5,22 +5,27 @@ using UnityEngine.UI;
 
 public class SpawnKeyboard : MonoBehaviour
 {
-    UnityEngine.TouchScreenKeyboard keyboard;
+    public TouchScreenKeyboard keyboard;
     public static string keyboardText = "";
-    public Text noteText;
-    public resetText resetText;
+    [SerializeField] private Text noteText;
+    [SerializeField] private resetText resetText;
 
+    private void Start()
+    {
+        keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false, false);
+    }
     public void Update()
     {
         if (keyboard != null)
         {
-            if (keyboard.status == TouchScreenKeyboard.Status.Done || Input.GetKey(KeyCode.KeypadEnter))
+            keyboardText = keyboard.text;
+            noteText.text = keyboardText;
+            if (keyboard.status == TouchScreenKeyboard.Status.Done || keyboard.status != TouchScreenKeyboard.Status.Visible)
             {
-                keyboardText = keyboard.text;
-                noteText.text = keyboardText;
                 resetText.resetAll();
                 keyboard = null;
             }
+            
         }
     }
 }
