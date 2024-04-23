@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
         public static PhotonRoom Room;
@@ -17,7 +18,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         private int playersInRoom;
         private int myNumberInRoom;
     public DrawerScript drawerScript;
-
+    [SerializeField] private GameObject cube = default;
         // private GameObject module;
         // private Vector3 moduleLocation = Vector3.zero;
 
@@ -133,6 +134,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         objects.Add(note_inst);
     }
 
+    
     public void Clear()
     {
         int id;

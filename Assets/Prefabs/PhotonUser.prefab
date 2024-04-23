@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUser: 1
+  isText: 0
 --- !u!1 &3000569308611278184
 GameObject:
   m_ObjectHideFlags: 0

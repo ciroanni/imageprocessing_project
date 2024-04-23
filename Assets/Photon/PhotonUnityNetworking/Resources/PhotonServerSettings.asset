@@ -48,6 +48,7 @@ MonoBehaviour:
   - PunRPC_SetNickName
   - PunRPC_ShareAzureAnchorId
   - SetPlayerOrigin
+  - spawnProvaRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

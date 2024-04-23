@@ -171,7 +171,6 @@ public class DrawerScript : MonoBehaviourPun, IMixedRealityPointerHandler
                 user = GameObject.Find("User1");
             }
         }
-
         Vector3 mousePosRel = mousePos - user.transform.position;
         photonView.RPC("FreeDrawRPC", RpcTarget.Others, mousePosRel, lineMaterial.color.r, lineMaterial.color.g, lineMaterial.color.b, lineMaterial.color.a);
 

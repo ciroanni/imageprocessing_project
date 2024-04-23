@@ -24,9 +24,7 @@ GameObject:
   - component: {fileID: 4881064982851614358}
   - component: {fileID: 358974387804636450}
   - component: {fileID: 6531188663337194653}
-  - component: {fileID: -8852170855620114323}
   - component: {fileID: 1669972894999316336}
-  - component: {fileID: -6592525050893386580}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Object
@@ -280,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUser: 0
+  isText: 0
 --- !u!114 &7641425794472122765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hostTransform: {fileID: 0}
+  hostTransform: {fileID: 8369137762340198671}
   manipulationType: 3
   twoHandedManipulationType: 7
   allowFarManipulation: 1
@@ -372,7 +371,7 @@ MonoBehaviour:
   rotateLerpTime: 0.001
   scaleLerpTime: 0.001
   enableConstraints: 1
-  constraintsManager: {fileID: 0}
+  constraintsManager: {fileID: 5111684969549043068}
   elasticsManager: {fileID: 0}
   onManipulationStarted:
     m_PersistentCalls:
@@ -412,30 +411,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba1aad025557f34ba7ea4ea69e19177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-8852170855620114323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726069816132838833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents:
-  - {fileID: 4208533389275381819}
-  - {fileID: 1669972894999316336}
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!114 &1669972894999316336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,15 +424,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUser: 0
---- !u!114 &-6592525050893386580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6726069816132838833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7ff472de31f8748b4ff5628f023148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  isText: 0
