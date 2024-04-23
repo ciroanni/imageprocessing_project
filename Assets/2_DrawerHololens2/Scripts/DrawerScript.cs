@@ -87,7 +87,6 @@ public class DrawerScript : MonoBehaviourPun, IMixedRealityPointerHandler
     [PunRPC]
     public void UndoRPC()
     {
-        Debug.Log("UNDORPC");
         int lastobj = 0;
         List<GameObject> objects = new List<GameObject>();
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Drawing"))
@@ -132,7 +131,6 @@ public class DrawerScript : MonoBehaviourPun, IMixedRealityPointerHandler
 
     void AddDrawing()
     {
-        Debug.Log("AddDrawingMaster");
         GameObject drawing = PhotonNetwork.Instantiate("Line", anchor.transform.position, anchor.transform.rotation);
         lineRenderer = drawing.GetComponent<LineRenderer>();
         lineRenderer.startWidth = startWidth;
@@ -145,11 +143,8 @@ public class DrawerScript : MonoBehaviourPun, IMixedRealityPointerHandler
     [PunRPC]
     public void AddDrawingRPC(int id, float startWidth, float endWidth)
     {
-        Debug.Log("AddDrawingRPC");
         GameObject drawing = PhotonView.Find(id).gameObject;
-        Debug.Log("Drawing game object, name: " + drawing.name + " ,PhotonID: " + id);
         lineRenderer = drawing.GetComponent<LineRenderer>();
-        Debug.Log("Linerenderer: " + lineRenderer.gameObject.name);
         lineRenderer.startWidth = startWidth;
         lineRenderer.endWidth = endWidth;
     }
@@ -178,7 +173,6 @@ public class DrawerScript : MonoBehaviourPun, IMixedRealityPointerHandler
         }
 
         Vector3 mousePosRel = mousePos - user.transform.position;
-        Debug.Log("Me: " + user.transform.position);
         photonView.RPC("FreeDrawRPC", RpcTarget.Others, mousePosRel, lineMaterial.color.r, lineMaterial.color.g, lineMaterial.color.b, lineMaterial.color.a);
 
     }
@@ -207,7 +201,6 @@ public class DrawerScript : MonoBehaviourPun, IMixedRealityPointerHandler
         }
 
         Vector3 mousePos = mousePosRel + user.transform.position;
-        Debug.Log("Other user: " + user.transform.position);
         lineRenderer.positionCount++;
         lineRenderer.SetPosition(lineRenderer.positionCount - 1, mousePos);
     }

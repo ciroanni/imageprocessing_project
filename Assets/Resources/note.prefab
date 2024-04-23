@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUser: 0
+  isText: 0
 --- !u!114 &5352106282603448354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUser: 0
+  isText: 1
 --- !u!1 &5612475320171684674
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUser: 0
+  isText: 0
 --- !u!114 &4976793684853241183
 MonoBehaviour:
   m_ObjectHideFlags: 0

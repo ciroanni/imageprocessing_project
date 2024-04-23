@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,15 @@ public class SpawnKeyboard : MonoBehaviour
 {
     public TouchScreenKeyboard keyboard;
     public static string keyboardText = "";
+    private PhotonView photonView;
     [SerializeField] private Text noteText;
     [SerializeField] private resetText resetText;
 
     private void Start()
     {
-        keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false, false);
+        photonView = GetComponent<PhotonView>();
+        if(photonView.IsMine)
+            keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false, false);
     }
     public void Update()
     {

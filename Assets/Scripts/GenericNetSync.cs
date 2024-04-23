@@ -1,18 +1,22 @@
 using Photon.Pun;
 using UnityEngine;
+using UnityEngine.UI;
     public class GenericNetSync : MonoBehaviourPun, IPunObservable
     {
         [SerializeField] private bool isUser = default;
+        [SerializeField] private bool isText = default;
 
         private Camera mainCamera;
 
         private Vector3 networkLocalPosition;
         private Quaternion networkLocalRotation;
         private Vector3 networkLocalScale;
-
-        private Vector3 startingLocalPosition;
+    private string networkLocalText;
+    private Vector3 startingLocalPosition;
         private Quaternion startingLocalRotation;
-        private Vector3 startingLocalScale;    
+        private Vector3 startingLocalScale;
+
+      
 
         void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
         {
@@ -21,12 +25,20 @@ using UnityEngine;
                 stream.SendNext(transform.localPosition);
                 stream.SendNext(transform.localRotation);
                 stream.SendNext(transform.localScale);
+                if (isText)
+                {
+                    stream.SendNext(GetComponent<Text>().text);
+                }
             }
             else
             {
                 networkLocalPosition = (Vector3) stream.ReceiveNext();
                 networkLocalRotation = (Quaternion) stream.ReceiveNext();
                 networkLocalScale = (Vector3) stream.ReceiveNext();
+                if (isText)
+                {
+                    networkLocalText = (string) stream.ReceiveNext();
+                }
             }
         }
 
@@ -60,6 +72,10 @@ using UnityEngine;
                 trans.localPosition = networkLocalPosition;
                 trans.localRotation = networkLocalRotation;
                 trans.localScale = networkLocalScale;
+                if (isText)
+                {
+                    gameObject.GetComponent<Text>().text = networkLocalText;
+                }
             }
 
             if (photonView.IsMine && isUser)
