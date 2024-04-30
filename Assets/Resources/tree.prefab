@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUser: 0
+  isText: 0
 --- !u!114 &-1983938410136356725
 MonoBehaviour:
   m_ObjectHideFlags: 0
