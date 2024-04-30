@@ -2,6 +2,19 @@
 
 La nostra attività di ricerca è stata incentrata sullo studio delle tecniche per permettere a due utenti di interagire in uno spazio AR condiviso con la possibilità di comunicare e apportare modifiche in real time. Attraverso un percorso di ricerca caratterizzato da numerosi tentativi e altrettanti fallimenti,  siamo riusciti a realizzare un prototipo di un’applicazione di condivisione real time dello stesso ambiente di lavoro che permette ai due utenti di manipolare gli stessi oggetti e di comunicare attraverso un sistema di scrittura interattiva. L’applicazione è stata sviluppata tramite l’utilizzo dell’engine Unity ed è stata implementata per Hololens 2.
 
+
+### Figura 1
+![alt text] (https://github.com/ciroanni/imageprocessing_project/blob/main/Media/figure1.png)
+
+### Figura 2
+![alt text] (https://github.com/ciroanni/imageprocessing_project/blob/main/Media/figure2.png)
+
+### Figura 3
+![alt text] (https://github.com/ciroanni/imageprocessing_project/blob/main/Media/figure3.png)
+
+### Figura 4
+![alt text] (https://github.com/ciroanni/imageprocessing_project/blob/main/Media/figure4.png)
+
 ## References
 [1]	Mert Usta, Drawer Hololens2 Unity. Progetto disponibile qui: https://github.com/mertusta1996/Drawer-Hololens2-Unity 
 
