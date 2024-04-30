@@ -1,1 +1,3 @@
-# imageprocessing_project
+# Condivisone di un ambiente in AR (Hololens2)
+
+La nostra attività di ricerca è stata incentrata sullo studio delle tecniche per permettere a due utenti di interagire in uno spazio AR condiviso con la possibilità di comunicare e apportare modifiche in real time. Attraverso un percorso di ricerca caratterizzato da numerosi tentativi e altrettanti fallimenti,  siamo riusciti a realizzare un prototipo di un’applicazione di condivisione real time dello stesso ambiente di lavoro che permette ai due utenti di manipolare gli stessi oggetti e di comunicare attraverso un sistema di scrittura interattiva. L’applicazione è stata sviluppata tramite l’utilizzo dell’engine Unity ed è stata implementata per Hololens 2.
