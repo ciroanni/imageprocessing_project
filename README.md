@@ -24,10 +24,10 @@ Progetto sviluppato per il corso di Image Processing and Computer Vision del Pol
     <img src="screenshots/figure4.png" width="512" height="287" />
 </p>
 
-### Video registrato con Hololens2
-<p>
-    <video src="video/20240423_165721_HoloLens.mp4"/>
-</p>
+### Video registrati con Hololens2 
+[Video 1](https://github.com/ciroanni/imageprocessing_project/video/20240423_165721_HoloLens.mp4)
+
+[Video 2](https://github.com/ciroanni/imageprocessing_project/video/20240423_165722_HoloLens.mp4)
 
 ## References
 [1]	Mert Usta, Drawer Hololens2 Unity. Progetto disponibile qui: https://github.com/mertusta1996/Drawer-Hololens2-Unity 
